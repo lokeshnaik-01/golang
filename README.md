@@ -19,3 +19,6 @@
 
 ## SPRINTF
 - fmt.sprintf() can be used to stored the formatted output into some string
+
+## Functions
+- func calculatePower(val1, val2, val3, val4 int) // here all values are expected to be of int type

@@ -23,4 +23,16 @@ func main() {
 	formattedFV := fmt.Sprintf("Future value: %.2f", futureValue)
 	fmt.Print(formattedFV, "\nNumber of years ", years)
 
+	noReturn("\nThis function call doesn't return any value")
+	fmt.Println(calculatePower(10, 20))
+}
+
+func noReturn(text string) {
+	fmt.Println(text)
+}
+
+func calculatePower(val1 int, val2 int) (int, int) {
+	f1 := 10
+	f2 := val1 / val2
+	return f1, f2
 }
