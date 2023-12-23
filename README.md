@@ -22,3 +22,9 @@
 
 ## Functions
 - func calculatePower(val1, val2, val3, val4 int) // here all values are expected to be of int type
+
+## Write data to file
+- we can write string so use sprintf() to get the string
+
+## strconv
+- string conversion used to convert string from string to float or int, will return two values one is converted value and other error
