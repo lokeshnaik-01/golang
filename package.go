@@ -45,6 +45,10 @@ func main() {
 	if(err!=nil) {
 		fmt.Println("error is", err)
 		panic("in panic code below it not executed")
+		// TODO
+		/*
+		check panic wrt defer
+		*/
 		fmt.Println("this is not executed")
 	}
 	fmt.Println("this is not executed")

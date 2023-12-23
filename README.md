@@ -31,3 +31,6 @@
 
 ## error handling
 - we should write function such that it doesn't crash application as it doesn't have try catch, we need to import errors module
+
+## panic
+ When a panic occurs, the normal flow of the program is stopped, and the program starts to unwind the stack, executing any deferred functions along the way.
