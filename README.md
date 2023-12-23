@@ -18,4 +18,4 @@
 - We can't scan string with spaces using scan
 
 ## SPRINTF
-- fmt.sprintf() cann be used to stored the formatted output into some string
+- fmt.sprintf() can be used to stored the formatted output into some string
