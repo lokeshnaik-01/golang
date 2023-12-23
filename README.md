@@ -33,4 +33,15 @@
 - we should write function such that it doesn't crash application as it doesn't have try catch, we need to import errors module
 
 ## panic
- When a panic occurs, the normal flow of the program is stopped, and the program starts to unwind the stack, executing any deferred functions along the way.
+ - When a panic occurs, the normal flow of the program is stopped, and the program starts to unwind the stack, executing any deferred functions along the way.
+
+ ## packages
+ - package.go is the main package if we write some function inside test.go and put the package as main the functions inside test.go can directly be used by package.go as they belong to the same package
+
+ ## import
+- when importing packages we should set the module-path from go.mod and the folder where we are have written the modules
+- if a function needs to be exported to another file then we should give it as Capital case or else small
+
+## go.mod
+- it'll list the third party dependencies that we are using in the application
+- `go get` will get the required dependencies
