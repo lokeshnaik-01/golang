@@ -5,9 +5,14 @@ import (
 	"strconv"
 	"os"
 	"errors"
+	"example.com/first-app/calculator"
+	"github.com/Pallinder/go-randomdata"
 )
 
 func main() {
+	printBS()
+	fmt.Println(calculator.AddVal(10, 20))
+	fmt.Println("dummy ph", randomdata.PhoneNumber())
 	fmt.Println("Hello World");
 	fmt.Println(`back ticks can be used to print`);
 
