@@ -2,6 +2,8 @@ package main
 import (
 	"fmt"
 	"math"
+	"strconv"
+	"os"
 )
 
 func main() {
@@ -25,6 +27,16 @@ func main() {
 
 	noReturn("\nThis function call doesn't return any value")
 	fmt.Println(calculatePower(10, 20))
+
+	
+	os.WriteFile("balance.txt", []byte(formattedFV), 0644) //0644 is the file permisson
+
+	data, _ := os.ReadFile("balance.txt")
+	fmt.Println(string(data))
+
+	floatVal := "65.655"
+	val, _ := strconv.ParseFloat(floatVal, 64)
+	fmt.Println("floatval ", val)
 }
 
 func noReturn(text string) {
