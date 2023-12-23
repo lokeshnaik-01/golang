@@ -28,3 +28,6 @@
 
 ## strconv
 - string conversion used to convert string from string to float or int, will return two values one is converted value and other error
+
+## error handling
+- we should write function such that it doesn't crash application as it doesn't have try catch, we need to import errors module

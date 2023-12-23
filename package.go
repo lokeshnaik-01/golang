@@ -4,6 +4,7 @@ import (
 	"math"
 	"strconv"
 	"os"
+	"errors"
 )
 
 func main() {
@@ -26,8 +27,10 @@ func main() {
 	fmt.Print(formattedFV, "\nNumber of years ", years)
 
 	noReturn("\nThis function call doesn't return any value")
-	fmt.Println(calculatePower(10, 20))
-
+	v1, v2, err := calculatePower(10, 20)
+	if err == nil {
+		fmt.Println(v1, v2)
+	}
 	
 	os.WriteFile("balance.txt", []byte(formattedFV), 0644) //0644 is the file permisson
 
@@ -37,14 +40,25 @@ func main() {
 	floatVal := "65.655"
 	val, _ := strconv.ParseFloat(floatVal, 64)
 	fmt.Println("floatval ", val)
+
+	data, err = os.ReadFile("balance1.txt")
+	if(err!=nil) {
+		fmt.Println("error is", err)
+		panic("in panic code below it not executed")
+		fmt.Println("this is not executed")
+	}
+	fmt.Println("this is not executed")
 }
 
 func noReturn(text string) {
 	fmt.Println(text)
 }
 
-func calculatePower(val1 int, val2 int) (int, int) {
+func calculatePower(val1 int, val2 int) (int, int, error) {
+	if(val1!=10) {
+		return 1,1, errors.New("Custom error")
+	}
 	f1 := 10
 	f2 := val1 / val2
-	return f1, f2
+	return f1, f2, nil
 }
