@@ -1,6 +1,4 @@
-<<<<<<< Updated upstream
-# golang
-=======
+
 # golang
 
 ## PACKAGES
@@ -13,4 +11,3 @@
 ## MODULES
 - one module consists of multiple packages
 - modules provide a way to manage dependencies and versioning for your Go projects
->>>>>>> Stashed changes
