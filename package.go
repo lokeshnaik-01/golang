@@ -6,10 +6,25 @@ import (
 	"os"
 	"errors"
 	"example.com/first-app/calculator"
+	"example.com/first-app/user"
 	"github.com/Pallinder/go-randomdata"
 )
 
 func main() {
+
+	user.UserStructres()
+
+	var appUser *user.User
+	appUser = &user.User {
+		FirstName: "Lokesh",
+	}
+
+	admin := user.NewAdmin("LokeshNaik")
+	admin.User.OutputUserDetails()
+
+	appUser.StructureFunction()
+	pointerFunctions()
+	//structres()
 	printBS()
 	fmt.Println(calculator.AddVal(10, 20))
 	fmt.Println("dummy ph", randomdata.PhoneNumber())
@@ -19,10 +34,10 @@ func main() {
 	const investmentAmount = 1000
 	// constant can't be changed
 	var expectedReturnRate float64= 5.5
-	var years float64= 10
+	var years float64 = 10
 
 	fmt.Print("Input the number of years: ")
-	fmt.Scan(&years)
+	// fmt.Scan(&years)
 
 	futureValue := investmentAmount * math.Pow(1+expectedReturnRate/100, years)
 	fmt.Println("Future value :",  futureValue, " years ", years)

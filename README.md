@@ -16,6 +16,7 @@
 ## INPUT VALUES
 - fmt.Scan(&<var_name>) `var_name` should be declared with a type and we need to pass the address of it for scan
 - We can't scan string with spaces using scan
+- scanln() can be used to tell go the input value is done when we press enter
 
 ## SPRINTF
 - fmt.sprintf() can be used to stored the formatted output into some string
@@ -45,3 +46,15 @@
 ## go.mod
 - it'll list the third party dependencies that we are using in the application
 - `go get` will get the required dependencies
+
+## pointers
+- pointers to struct are not valid in go
+
+
+## Structures
+- type <Struct_Name> struct {
+    <Var1> string,
+    <var2> string
+}
+- if we want the struct to access to other files then it should be named capital or else it should be named small
+- similarly struct fields also work the same if we want to access a field of a struct it should ne capital
